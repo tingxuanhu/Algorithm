@@ -4,7 +4,6 @@
 - std::isstringstream可以解决cin吃不了整行按空格分隔的输入的bug：
 ```cpp
 如果想要在输入中使用空格或其他分隔符来分隔整数值，可以使用 `getline()` 函数读取一行字符串，然后使用 `istringstream` 类型的输入流来逐个读取其中的整数值。
-<br>
 对于输入描述中的示例输入，可以按照以下方式读取：
 int main() {
     string line;
@@ -27,7 +26,6 @@ int main() {
 
     return 0;
  在上述代码中，首先使用 `getline(cin, line)` 读取第一行输入的整数值，并将字符串转换成输入流 `istringstream`，然后逐个读取其中的整数值并输出。
- <br>
  接着使用 `getline(cin, line)` 读取第二行输入的整数值，再将字符串转换成输入流 `istringstream`，并逐个读取其中的整数值并输出。
 }
 ```
