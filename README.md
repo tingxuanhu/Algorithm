@@ -17,9 +17,9 @@ int main() {
 
     line.clear();
     getline(cin, line);  // 读取第二行输入的链表B的值
-    iss.str(line);  // 将字符串转换成输入流
-    iss.clear();  // 清除输入流的状态和缓冲区
-    while (iss >> val) {  // 从输入流中读取整数
+    iss.str(line);  // 清除 istringstream 对象之前的输入流，并将其替换为新字符串转换成的输入流
+    iss.clear();   // iss.str(line) 将字符串 line 转成新输入流，并替换掉 istringstream 对象之前的输入流，但不会清除 istringstream 对象的状态和缓冲区，因此在使用 iss.str(line) 函数之前，需要先调用 iss.clear() 函数清除 istringstream 对象的状态和缓冲区。
+    while (iss >> val) { 
         cout << val << " ";
     }
     cout << endl;
