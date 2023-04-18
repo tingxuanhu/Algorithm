@@ -88,8 +88,6 @@ void mergeList(LinkedList& src, LinkedList& tgt)
     {
         last->next = tp; 
     }
-
-   
 }
 
 
