@@ -23,7 +23,7 @@ public:
         size++;
     }
 
-    void removeKthNode(int k)
+    void removeKthNode(int k) // 从维护数据结构角度讲，还要判断tail是否被删除了（倒数第一），如果被删除了tail要修改为之前一个位置，但这里只删除一个节点然后返回，不太需要变tail
     {
         Node* lp = this->head->next;
         Node* fp = this->head->next;
