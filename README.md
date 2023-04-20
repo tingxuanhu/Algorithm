@@ -7,7 +7,7 @@
         dp[i] = new int[k+1];
         memset(dp[i], -1, sizeof(int)*(k+1));
     }
-ccc
+```
 
 ## 常用的输入输出流总结：
 - `cin >>` 负责吃string，碰到空格、回车、制表符则停止，缓存空间暂时保留下来，直到被使用或者再次吃新的数据
@@ -17,6 +17,8 @@ ccc
 ```cpp
 int parentVal, leftVal, rightVal;
 while (scanf("%d:%d|%d", &parentVal, &leftVal, &rightVal) == 3) {...}
+```
+
 ```cpp
 如果想要在输入中使用空格或其他分隔符来分隔整数值，可以使用 `getline()` 函数读取一行字符串，然后使用 `istringstream` 类型的输入流来逐个读取其中的整数值。
 对于输入描述中的示例输入，可以按照以下方式读取：
