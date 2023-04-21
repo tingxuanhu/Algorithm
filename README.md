@@ -12,11 +12,10 @@
 ## 常用的输入输出流总结：
 - `cin >>` 负责吃string，碰到空格、回车、制表符则停止，缓存空间暂时保留下来，直到被使用或者再次吃新的数据
   - 因此不能用cin来吃整行以空格为分隔的输入，否则会面临只能吃到第一个数据，后续所有数据作废的尴尬局面
-- std::isstringstream可以解决cin吃不了整行按空格分隔的输入的bug：
-- 但其实更推荐使用的是scanf函数，比较轻松快捷，而且题目输入一般不会有误，无需判断，这能够省下不少写代码的时间
+- std::istringstream可以解决cin吃不了整行按空格分隔的输入的bug：
 ```cpp
 int parentVal, leftVal, rightVal;
-while (scanf("%d:%d|%d", &parentVal, &leftVal, &rightVal) == 3) {...}
+while (scanf("%d:%d|%d", &parentVal, &leftVal, &rightVal) == 3) {...}   // 用scanf可以处理连着输入但被： ｜等打断的情况，如果是空格，那istringstream就好
 ```
 
 ```cpp
