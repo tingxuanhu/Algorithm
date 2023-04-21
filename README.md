@@ -13,7 +13,7 @@
 - `cin >>` 负责吃string，碰到空格、回车、制表符则停止，缓存空间暂时保留下来，直到被使用或者再次吃新的数据
   - 如果能够知道一行元素的个数，可以用for loop来cin吃数据
  ```cpp
- for (int i = 0; i < N; ++i) { cin >> a[i] };
+ for (int i = 0; i < N; ++i) { cin >> a[i]; }
  ```
 
   - 如果不明确一行元素的个数，不能用cin来吃整行以空格为分隔的输入，而用std::istringstream
